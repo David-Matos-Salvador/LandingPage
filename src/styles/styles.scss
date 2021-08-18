@@ -163,7 +163,7 @@ header app-header {
   }
 
   &-menu {
-
+    display: none;
     .nav-list {
       @include flex(space-around, center, row);
       .nav-item {
@@ -264,10 +264,11 @@ app-search-bar {
         border: none;
         outline: none;
         box-shadow: none;
-        padding: 0.5rem;
+        padding: 1rem;
         &::placeholder {
           color: #030303bf;
           font-weight: 400;
+          font-size: 1.5rem;
           text-align: center;
         }
       }
@@ -356,18 +357,8 @@ app-search-bar {
   background: no-repeat url("../assets/img/main/hero/background.png");
   background-position: center;
   background-size: cover;
-  &:before {
-    background-color: #006ba680;
-    background-size: cover;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
+  &-bar{
+    max-width: 500px;
   }
   #{&}-content {
     position: absolute;
@@ -388,22 +379,42 @@ app-search-bar {
       font-size: 2rem;
     }
   }
+  &:before {
+    background-color: #006ba680;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
 }
 @include media-md {
   .hero {
+    &-bar{
+      max-width: initial;
+    }
     #{&}-content {
       position: absolute;
       display: initial;
       left: 1rem;
       right: initial;
-      top: 10rem;
+      top: 08rem;
+      .title{
+        font-size: 3rem;
+      }
     }
   }
 }
 @include media-lg {
   .hero {
     #{&}-content {
-      left: 5rem;
+      left: 2rem;
     }
     &:after {
       background: no-repeat url("../assets/img/main/hero/hero.png");
