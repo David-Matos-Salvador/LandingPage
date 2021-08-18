@@ -1,0 +1,51 @@
+<nav class="nav container">
+    <a href="#" class="nav-logo"> <img src="./assets/img/header/logo.svg" alt="Logo.png"></a>
+
+    <div class="nav-menu">
+        <ul class="nav-list ">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    LIVES <img src="./assets/icons/live.svg" alt="live">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Like Vendor
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Ranking
+                </a>
+            </li>
+
+            <ng-container *ngIf="isLogged; else elseTemplate">
+                <li class="nav-item-btns">
+                    <a href="#" class="btn  btn-outline-blue">
+                        Iniciar sesión
+                    </a>
+                    <a href="#" class="nav-icon-user">
+                        <img src="./assets/img/header/icon_user.svg" alt="Icono de usuario">
+                    </a>
+                </li>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <li class="nav-item-btns">
+                    <a href="#" class="btn  btn-outline-blue">
+                        Mis productos
+                    </a>
+                    <a href="#" class="btn btn-blue">
+                        Convertirse en vendedor
+                    </a>
+                </li>
+            </ng-template>
+
+
+        </ul>
+        <i class="uil uil-times nav__close " id="nav-close"></i>
+    </div>
+    <div class="nav-toggle">
+        <img src="assets/img/header/nav_toggle.svg" alt="nav toogle">
+    </div>
+</nav>
+<hr>

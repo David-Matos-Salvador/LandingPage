@@ -1,0 +1,21 @@
+<form class="search-bar">
+  <div class="search-bar-input">
+    <input type="text" class="input-control" placeholder="¿Que buscas vender?" formControl="controlz"
+      [matAutocomplete]="auto">
+
+    <mat-autocomplete #auto="matAutocomplete" class="search-bar-autocomplete">
+      <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+        {{street}}
+      </mat-option>
+    </mat-autocomplete>
+    <div class="btn-content">
+      <button class="btn btn-yellow">Buscar</button>
+    </div>
+  </div>
+
+  <div class="mat-autocomplete-pane-search ">
+    <div class="mat-option">Productos para vender</div>
+    <div class="mat-option">Servicios profesionales</div>
+    <div class="mat-option">Sumarme a empresas</div>
+  </div>
+</form>

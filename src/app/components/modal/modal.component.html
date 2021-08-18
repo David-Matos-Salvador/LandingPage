@@ -1,0 +1,14 @@
+<div id="modal-content-wrapper">
+  <header>
+    <h1>{{data.title}}</h1>
+  </header>
+  <div class="content">
+    <picture>
+      <img [src]="itemImageUrl" alt="icon">
+    </picture>
+    <p>{{data.message}}</p>
+  </div>
+  <footer>
+    <button class="btn btn-blue" (click)="closeModal()">Accion</button>
+  </footer>
+</div>

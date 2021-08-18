@@ -1,0 +1,133 @@
+<div class="container-principal">
+  <header>
+    <app-header [isLogged]="true"></app-header>
+  </header>
+  <main class="content" *ngIf="true">
+    <!-- <router-outlet></router-outlet> -->
+    <!-- <app-search-bar></app-search-bar> -->
+    <!-- <button mat-raised-button id="logout-button" (click)="openModal()">Logout</button> -->
+    <section class="hero container">
+      <div class="hero-content">
+        <h1 class="title">Busca los servicios ideales para tu negocio</h1>
+        <div>
+          <app-search-bar></app-search-bar>
+        </div>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h1 class="title-principal">Servicios profesionales</h1>
+      <swiper [config]="config">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide services-slide" *ngFor="let item of arrayImg">
+            <!-- [style.background-image]="'url(' +item.src+ ')'" -->
+            <div class="card">
+              <img [src]="item.src" alt="{{item.title}}" class="card-img">
+              <div class="card-title" [ngStyle]="{'background-color':item.color}">
+                <h2 class="title text-center">{{item.title}}</h2>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+          <div class="service-button">
+            <img src="./assets/icons/next.svg" alt="next">
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <div class="service-button">
+            <img src="./assets/icons/prev.svg" alt="prev">
+          </div>
+        </div>
+      </swiper>
+    </section>
+
+    <section class="products container">
+      <h1 class="title-principal">Ultimos productos para vos</h1>
+      <swiper [config]="config">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide products-slide" *ngFor="let item of arrayProducts">
+            <div class="card" >
+              <img [src]="item.src" alt="{{item.title}}" class="card-img">
+              <div class="product-card-title">
+                <h2 class="title text-center">{{item.title}}</h2>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+          <div class="service-button">
+            <img src="./assets/icons/next.svg" alt="next">
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <div class="service-button">
+            <img src="./assets/icons/prev.svg" alt="prev">
+          </div>
+        </div>
+
+      </swiper>
+
+    </section>
+    <section class="sponsors container">
+      <h1 class="title sponsors-title text-center">Quienes confian en nosotros</h1>
+      <div class="sponsors-img">
+        <img src="./assets/img/sponsors/google.png" alt="Google">
+        <img src="./assets/img/sponsors/netflix.png" alt="Netflix">
+        <img src="./assets/img/sponsors/paypal.png" alt="Paypal">
+        <img src="./assets/img/sponsors/fb.png" alt="Facebook">
+      </div>
+    </section>
+    <section class="vendor mt-3 container">
+      <img src="../assets/img/vendor/cart.png" alt="" class="vendor-img">
+      <div class="vendor-text grid">
+        <h1 class="title-principal text-center">¿Vender con LikeVendor?</h1>
+        <p class="text">Los Compradores están primordialmente preocupados por obtener un retorno decente sobre
+          su inversión. Los
+          Vendedores tienden a darle un valor sentimental que a veces distorsiona el precio verdadero.
+          Un negocio es un "elemento vivo", por ende debería venderse como tal. Por eso utilizamos el Método de Flujos
+          de Caja Descontados, tomando en cuenta factores como Costo de Capital, para así llegar a un Valor Patrimonial
+          verdadero.</p>
+        <div class="text-center vendor-content-btn"><button class="btn btn-outline-blue ">Quiero vender mi
+            producto</button></div>
+      </div>
+    </section>
+    <section class="enterprise mt-3 container">
+      <div class="enterprise-text grid">
+        <h1 class="title-principal text-center">¿Vender con LikeVendor?</h1>
+        <p class="text">Los Compradores están primordialmente preocupados por obtener un retorno decente sobre
+          su inversión. Los
+          Vendedores tienden a darle un valor sentimental que a veces distorsiona el precio verdadero.
+          Un negocio es un "elemento vivo", por ende debería venderse como tal. Por eso utilizamos el Método de Flujos
+          de Caja Descontados, tomando en cuenta factores como Costo de Capital, para así llegar a un Valor Patrimonial
+          verdadero.</p>
+        <div class="text-center container-content-btn"><button class="btn btn-outline-black ">Quiero vender mi
+            producto</button></div>
+      </div>
+      <img src="../assets/img/enterprise/bussines-man.png" alt="" class="enterprise-img">
+    </section>
+    <section class="likevendor mt-3 container">
+      <h1 class="title-principal text-center">Genera ingresos con LIKEVENDOR</h1>
+      <div class="grid">
+        <div class="likevendor-slide" *ngFor="let item of arrayLikeVendor">
+          <h1>{{item.title}}</h1>
+          <hr>
+          <img [src]="item.src" alt="img" width="100" height="100">
+          <p>{{item.text}}</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div>

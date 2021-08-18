@@ -1,0 +1,109 @@
+/* =============== VARIABLES ===============*/
+
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$black-color: #000 !default;
+$white-color: #fff !default;
+$yellow-color:#F79E45 !default;
+$blue-color: #006ba6;
+$blue-opacity-color: #1c79ac;
+$light-blue-color:#0496FF;
+$secondary-color: #ffffff;
+$line-color: #5ce1e6;
+
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+$border-radius: 0.4rem !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$line-height-base: 1.5 !default;
+
+
+$input-color: $black-color;
+$input-bg: $white-color;
+$input-border-color: $blue-color;
+$input-border-radius: $border-radius;
+
+$input-box-shadow: inset 0 1px 1px rgba($black-color, 0.075) !default;
+$input-focus-color: $input-color;
+$input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$input-focus-bg: $white-color;
+$input-focus-border-color: lighten($blue-color, 25%) !default;
+$input-placeholder-color: $blue-opacity-color !default;
+$input-disabled-bg: $gray-200 !default;
+$input-btn-border-width: $border-width !default;
+$input-border-width: $input-btn-border-width !default;
+
+/*========== Font  ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+$font-family-raleway: "Raleway", sans-serif;
+$font-family-lato: "Lato", sans-serif;
+
+$font-weight-300: 300 !default;
+$font-weight-400: 400 !default;
+$font-weight-500: 500 !default;
+$font-weight-600: 600 !default;
+$font-weight-700: 700 !default;
+$font-weight-base: $font-weight-400 !default;
+
+
+$font-size-title:1.7rem;
+
+
+$mb-1-5: 1.5rem;
+$mb-1-1: 1.1rem;
+$mb-2-1: 2.18rem;
+$pb-1-0: 1rem;
+$pb-1-25: 1.25rem;
+/*========== Button ==========*/
+$input-btn-focus-width: 2px !default;
+$input-btn-focus-color: rgba($blue-color, 0.25) !default;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-padding-y: 0.2rem !default;
+$input-btn-padding-x: 0.5rem !default;
+$input-btn-line-height: $line-height-base !default;
+$btn-font-weight: $font-weight-700 !default;
+$btn-border-width: 2px;
+$btn-border-radius: $border-radius !default;
+$btn-line-height: $line-height-base;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out !default;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$btn-disabled-opacity: 0.65 !default;
+$btn-padding-y: $input-btn-padding-y !default;
+$btn-padding-x: $input-btn-padding-x !default;
+$btn-active-box-shadow: inset 0 3px 5px rgba($blue-color, 0.125) !default;
+$btn-focus-width: $input-btn-focus-width !default;
+$btn-color-outline: #0496ff;
+
+// Forms
+
+$input-padding-y: 1.063rem !default;
+$input-padding-x: 0.875rem !default;
+$input-line-height: $input-btn-line-height !default;
+
+$header-font-size: 1.3rem !default;
+$header-toogle-width: 42px;
+$header-toogle-height: 35px;
+$header-btn-padding: 0.87rem 1.18rem;
+$header-height: 6.75rem;
+$header-z-index: 1000;
+$hr-height: 0.625rem;
+
+
+$footer-socials-gap: 2.563rem;
+$footer-socials-size: 3.256rem;
+$footer-section-minmax: 20rem;
+
+
+
+$hero-z-index-content:100;
